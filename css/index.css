@@ -1,0 +1,1154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* _____________mousepointer */
+:root {
+   
+   --white-rbg-color: 255, 255, 255;
+   --green-rbg-color: 0, 212, 113;
+}
+.cursor {
+  z-index:  1;
+  
+  width: 30px;
+  height: 30px;
+  border: 3px solid #00f298;
+  border-radius: 50%;
+  position: absolute;
+  transition-duration: .05s;
+  transition-timing-function: ease-out;
+  animation: cursor-animate .5s infinite alternate;
+}
+
+.cursor::after {
+  z-index: 2;
+  content: "";
+  width: 80px;
+  height: 80px;
+  border: 8px solid #d5dbd6ab;
+  border-radius: 50%;
+  position: absolute;
+  transition-duration: 5s;
+  top: -30px;
+  left: -28px;
+  animation: cursor-animate-2 550ms infinite alternate;
+}
+
+/*Modificador*/
+.cursor--expand {
+  animation: cursor-animate-3 550ms forwards;
+  border: 3px solid rgb(var(--green-rbg-color));
+}
+
+.cursor--expand::after {
+  border: 5px solid rgba(var(--green-rbg-color), .3);
+}
+
+/*Keyframes*/
+@keyframes cursor-animate {
+  from {
+     transform: scale(1);
+  }
+
+  to {
+     transform: scale(1.5)
+  }
+}
+
+@keyframes cursor-animate-2 {
+  from {
+     transform: scale(1);
+  }
+
+  to {
+     transform: scale(.5);
+  }
+}
+
+@keyframes cursor-animate-3 {
+  0% {
+     transform: scale(3);
+  }
+
+  50% {
+     transform: scale(1);
+  }
+
+  100% {
+     transform: scale(3);
+     opacity: 0;
+  }
+}
+
+/* ______home */
+.main{
+    position: relative;
+    height: 100vh;  
+}
+
+ 
+
+  
+
+/* navbar_____________ */
+.navone{
+   position: relative;
+   
+  width: 100%;
+  height:9vh ;
+  display: flex;
+  justify-content: center;
+
+  
+}
+.navtwo{
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-weight: 700;
+  margin-top: 2%;
+  width: 80%;
+  text-shadow:2px 2px 8px #313741;
+    display: flex;
+    justify-content: center;
+  align-items: center;
+  height: 7vh;
+  border-radius: 50px;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    background: -webkit-linear-gradient(left, #00f298, #07f7f7);
+    z-index: 1000;
+    transition-duration: .2s;
+}
+.navbutton{
+  width: 45.6px;
+  height: 29.6px;
+  padding-top: 0px;
+  padding-bottom: 3px;
+  padding-right: 1px;
+  padding-left: 1px;
+  margin-bottom: 9px;
+}
+li a {
+  display: block;
+  color: white!important;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navtwo.shrink {
+   /* Change the height when scrolled */
+   height: 8vh;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  position: fixed;
+  border-radius: 0px;
+  padding: 0%;
+  margin-top: 0%;
+  /* margin-bottom: 20%; */
+  top: 0%;
+  width: 100%;
+  z-index: 1000;
+}
+.main img{
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  filter: brightness(25%); 
+  transition-duration: .02s;
+ 
+}
+.firstbg{
+   color: rgb(255, 255, 255);
+    width: 100%;
+  
+}
+.firstbgtwo{
+    width: 80%;
+   margin-top: 5%;
+    padding: 2%;
+ /* background-color: #00f298; */
+  }
+
+
+.firstrow{
+  /* background-color: #01b2d6; */
+  position: relative;
+  z-index: 500;
+  width: 100%;
+   
+}
+.name{
+
+  font-family: "Poppins", sans-serif;
+  transition: opacity 0.1s ease;
+ 
+}
+.name h1{
+  background: -webkit-linear-gradient(left, #05ffa3, #06d2d2);
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  color: transparent;
+  
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+}
+/* skills___________ */
+.maintwo{
+ 
+  width: 100%;
+  height: 80vh;
+  /* background: radial-gradient(#24002c, #000000); */
+  background-color: #22252c;
+}
+.skills{
+  margin-top: 2%;
+}
+.skills h1{
+  
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  background: -webkit-linear-gradient(left, #00f298, #07f7f7);
+  -webkit-background-clip: text; 
+  
+  -webkit-text-fill-color: transparent;
+
+}
+.skill h4{
+  font-size:20px ;
+}
+.skill i{
+  font-size: 30px;
+  background: -webkit-linear-gradient(left, #d9ff00, #56ff02);
+  -webkit-background-clip: text; 
+  
+  -webkit-text-fill-color: transparent;
+
+}
+.skillcards{
+ 
+background-color: #313741;
+ display: flex;
+ justify-content: center;
+  width: 90%;
+ margin-top: 2%;
+  height: 60vh;
+ 
+  
+}
+.cards{
+ margin-right: 1%;
+
+  color: white;
+  width: 40%;
+
+  height: 35vh;
+  }
+  .skill{
+    margin-top: 4%;
+  }
+  .bar{
+    background-color: #1c1d20;
+    display: block;
+    width: 90%;
+    height: 1.5vh;
+    border: 1px solid rgb(30, 29, 29);
+    border-radius: 10px;
+    overflow: hidden;
+    transition:all 0.3s cubic-bezier(.25,.8,.25,1);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  .bar span{
+    height: 1.5vh;
+    float: left;
+   background: linear-gradient(to  left, #00f298, #07f7f7);
+   
+  }
+ .bar .html{
+  width: 80%;
+  animation: html 3s;
+ }
+ @keyframes html{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 80%;
+  }
+ }
+ .bar .css{
+  width: 70%;
+  animation: css 3s;
+ }
+ @keyframes css{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 70%;
+  }
+ }
+ .bar .bootstrap{
+  width: 70%;
+  animation: bootstrap 3s;
+ }
+ @keyframes bootstrap{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 70%;
+  }
+ }
+ .bar .python{
+  width: 80%;
+  animation: python 3s;
+ }
+ @keyframes python{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 80%;
+  }
+ }
+ .bar .django{
+  width: 70%;
+  animation: django 3s;
+ }
+ @keyframes django{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 70%;
+  }
+ }
+ .bar .flask{
+  width: 50%;
+  animation: flask 3s;
+ }
+ @keyframes flask{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 50%;
+  }
+ }
+.mainthree{
+  /* background: radial-gradient(#26002e, #000000); */
+  width: 100%;
+  height: 90vh;
+  background-color: #22252c;
+}
+.aabout{
+ display: flex;
+ width: 90%;
+ 
+
+
+}
+.abouttext{
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  color: white;
+  width: 50%;
+ 
+ 
+}
+.textbox{
+  align-items: center;
+ width: 100%;
+  }
+  .textbox h1{
+    text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  background: -webkit-linear-gradient(left, #00f298, #07f7f7);
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 3%;
+ 
+  }
+.mypic{
+
+ 
+ border: 8px solid transparent;
+ border-image: linear-gradient( to left, #05ffa3, #06d2d2)  ;
+ position: absolute;
+ width: 62%;
+ height:90% ;
+ left: 5%;
+ bottom: 1%;
+ border-image-slice: 1;
+ 
+}
+.aboutimage{
+ 
+  position: relative;
+}
+.me{
+  width: 62%;
+  
+
+
+ 
+  filter: drop-shadow(1px 1px 20px rgba(0, 0, 0, 0.5)) drop-shadow(1px 1px 20px rgba(0, 0, 0, 0.5));
+}
+
+.mainfour{
+  width: 100%;
+  height: 80vh;
+  background-color: #22252c;
+
+}
+.myproj h1{
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  background: -webkit-linear-gradient(left, #00f298, #07f7f7);
+  -webkit-background-clip: text; 
+  
+  -webkit-text-fill-color: transparent;
+
+}
+.myprojects{
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  
+  width: 90%;
+  
+  height: 60vh;
+  margin-top: 3%;
+}
+.projcards{
+  margin: 2%;
+  border-radius: 10px;
+  background-color: #313741;
+  transition: 0.3s;
+  width: 24%;
+  height : 40vh;  
+  z-index: 1;
+  box-shadow : 0 5px 20px rgba(0,0,0,0.5);
+
+}
+
+
+.projcards img{
+  box-shadow : 0 5px 20px rgba(0,0,0,0.5);
+  width: 100%;
+  /* height : 35vh; */
+  border-radius: 10px;
+  position : relative;
+  z-index : 0;
+  top :-8%;
+  transition : 0.3s ease-in-out;
+  left: 0%;
+ 
+}
+.projcards:hover img{
+  box-shadow : 0 5px 20px rgba(0,0,0,0.5);
+ z-index: 0;
+  top :-25%;
+
+}
+.projcards:hover{
+  height: 45vh;
+  z-index: 2;
+}
+.projcards:hover .projname{
+  visibility : visible;
+  opacity : 1;
+  transition-delay: 0.2s;
+
+}
+.projname{
+  visibility : hidden;
+  opacity : 0;
+  background-color: #313741;
+  position : relative;
+  top : -25%;
+ transition : 0.3s ease-in-out;
+  margin: 3%;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  background: -webkit-linear-gradient(left, #00f298, #07f7f7);
+  -webkit-background-clip: text; 
+  
+  -webkit-text-fill-color: transparent;
+}
+.projname h3{
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+.projname p{
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.contactme h1{
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  background: -webkit-linear-gradient(left, #00f298, #07f7f7);
+  -webkit-background-clip: text; 
+  
+  -webkit-text-fill-color: transparent;
+
+}
+
+.mainfive{
+  width: 100%;
+  height: 40vh;
+  background-color: #22252c;
+}
+.contactsymbols{
+  margin-top: 4%;
+  display: flex;
+  justify-content: center;
+  
+  width: 80%;
+
+  height: 10vh;
+}
+.icon{
+  z-index: 2;
+  margin: 1%;
+  display: flex;
+justify-content: center;
+width: 50px;
+height: 50px;
+text-align: center;
+border-radius: 50%;
+
+background-color: #2a2929;
+
+}
+.icon:hover{
+  background-color: #3d424b;
+ 
+
+}
+
+.icon i{
+  font-size: 30px;
+  background: -webkit-linear-gradient(left, #00f298, #07f7f7);
+  -webkit-background-clip: text; 
+  
+  -webkit-text-fill-color: transparent;
+
+}
+
+/*
+_____________________________________________-
+mediaquery............................... 
+_______________________________________-____*/
+@media (max-width: 575.98px) {
+  /* Styles for extra small devices */
+  .navone{
+    height: 3vh;
+  }
+  .navtwo{
+    height: 3vh;
+    padding: 1px;
+  }
+  .navtwo.shrink {
+  
+    height: 4vh;
+   
+
+ }
+  .navbutton{
+    
+      width: 23.6px;
+      height: 15.6px;
+      padding: 0px;
+      margin: 0px;
+    
+  }
+  .nav-item a{
+    font-size: 10px;
+  }
+  .navic{
+    width: 10px;
+    height: 17px;
+    margin: 0px;
+
+    top: 0%;
+  }
+  .main{
+    position: relative;
+    height: 40vh;  
+}
+.main img{
+  
+  height: 50vh;
+}
+.name h1{
+  font-size: 15px;
+}
+.name h3{
+  font-size: 10px;
+}
+.name p{
+  font-size: 8px;
+}
+.skillcards{
+ 
+ 
+  height: 25vh;
+   }
+   .maintwo{
+ 
+    width: 100%;
+    height: 40vh;
+  }
+  .skills h1{
+    font-size: 15px;
+  }
+  .skill h4{
+    font-size: 12px;
+  }
+.skill i{
+  font-size: 15px;
+}
+.bar{
+  height: .8vh;
+}
+.bar span{
+  height: .8vh;
+}
+.textbox h1{
+ font-size: 15px;
+font-weight: 700;
+
+margin-bottom: 3%;
+
+}
+.textbox p{
+  font-size: 6px;
+}
+.mainthree{
+  height: 40vh;
+}
+.aabout{
+  height: 30vh;
+}
+.abouttext{
+  padding: 0%;
+}
+.mypic{
+  height: 60%;
+}
+.me{
+  width: 70%;
+}
+.mainfour{
+  
+  height: 40vh;
+}
+.myproj h1{
+  font-size: 18px;
+}
+.myprojects{
+  height: 30vh;
+ 
+}
+.projcards{
+  height:15vh ;
+  /* width: 25%; */
+}
+
+.projcards:hover{
+  height: 20vh;
+}
+.projname h3{
+ font-size: 12px;
+ margin-top: 2px;
+}
+.projname p{
+ font-size: 10px;
+ margin: 0px;
+}
+.mainfive{
+  height: 15vh;
+}
+.contactme h1{
+  font-size: 20px;
+}
+.contactsymbols{
+  height: 5vh;
+}
+.icon{
+  width: 20px;
+height: 20px;
+}
+.icon i{
+  font-size: 15px;
+}
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* Styles for small devices */
+  .navone{
+    height: 4vh;
+  }
+  .navtwo{
+    height: 4vh;
+    padding: 1px;
+  }
+  .navtwo.shrink {
+  
+    height: 4vh;
+   
+
+ }
+  .navbutton{
+    
+      width: 23.6px;
+      height: 15.6px;
+      padding: 0px;
+      margin: 0px;
+    
+  }
+  .nav-item a{
+    font-size: 10px;
+  }
+  .navic{
+    width: 10px;
+    height: 17px;
+    margin: 0px;
+
+    top: 0%;
+  }
+  .main{
+    position: relative;
+    height: 50vh;  
+}
+.main img{
+  
+  height: 60vh;
+}
+.name h1{
+  font-size: 25px;
+}
+.name h3{
+  font-size: 12px;
+}
+.skillcards{
+ 
+  
+  height: 25vh;
+   }
+   .maintwo{
+ 
+    width: 100%;
+    height: 40vh;
+  }
+  .skills h1{
+    font-size: 30px;
+  }
+  .skill h4{
+    font-size: 15px;
+  }
+.skill i{
+  font-size: 20px;
+}
+.textbox h1{
+  font-size: 18px;
+ font-weight: 700;
+ 
+ margin-bottom: 3%;
+ 
+ }
+ .textbox p{
+   font-size: 9px;
+ }
+ .mainthree{
+   height: 50vh;
+ }
+ .aabout{
+   height: 40vh;
+ }
+ .abouttext{
+   padding: 0%;
+ }
+ .mypic{
+   height: 60%;
+ }
+ .me{
+   width: 80%;
+ }
+ .mainfour{
+  
+  height: 40vh;
+}
+.myproj h1{
+  font-size: 18px;
+}
+.myprojects{
+  height: 30vh;
+ 
+}
+.projcards{
+  height:15vh ;
+  /* width: 25%; */
+}
+
+.projcards:hover{
+  height: 20vh;
+}
+.projname h3{
+ font-size: 12px;
+ margin-top: 2px;
+}
+.projname p{
+ font-size: 10px;
+ margin: 0px;
+}
+.mainfive{
+  height: 15vh;
+}
+.contactme h1{
+  font-size: 20px;
+}
+.contactsymbols{
+  height: 5vh;
+}
+.icon{
+  width: 20px;
+height: 20px;
+}
+.icon i{
+  font-size: 15px;
+}
+
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* Styles for medium devices */
+  .navone{
+    height: 5vh;
+  }
+  .navtwo{
+    height: 5vh;
+    padding: 1px;
+  }
+  .navtwo.shrink {
+  
+    height: 5vh;
+   
+
+ }
+  .navbutton{
+    
+      width: 23.6px;
+      height: 15.6px;
+      padding: 0px;
+      margin: 0px;
+    
+  }
+  .nav-item a{
+    font-size: 10px;
+  }
+  .navic{
+    width: 10px;
+    height: 17px;
+    margin: 0px;
+
+    top: 0%;
+  }
+  .main{
+    position: relative;
+    height: 60vh;  
+}
+.main img{
+  
+  height: 90vh;
+}
+.skillcards{
+ 
+ 
+  height: 30vh;
+   }
+   .maintwo{
+ 
+    width: 100%;
+    height: 45vh;
+  }
+  .skill h4{
+    font-size: 18px;
+  }
+  .skill i{
+    font-size: 22px;
+  }
+  .textbox h1{
+    font-size: 25px;
+   font-weight: 700;
+   
+   margin-bottom: 3%;
+   
+   }
+   .textbox p{
+     font-size: 13px;
+   }
+   .mainthree{
+     height: 60vh;
+   }
+   .aabout{
+     height: 50vh;
+   }
+   .abouttext{
+     padding: 0%;
+   }
+   .mypic{
+     height: 60%;
+   }
+   .me{
+     width: 75%;
+   }
+   .mainfour{
+  
+    height: 40vh;
+  }
+  .myproj h1{
+    font-size: 25px;
+   font-weight: 700;
+  }
+  .myprojects{
+    height: 30vh;
+   
+  }
+  .projcards{
+    height:19vh ;
+    /* width: 25%; */
+  }
+  
+  .projcards:hover{
+    height: 24vh;
+  }
+  .projname h3{
+   font-size: 12px;
+   margin-top: 2px;
+  }
+  .projname p{
+   font-size: 10px;
+   margin: 0px;
+  }
+  .mainfive{
+    height: 15vh;
+  }
+  .contactme h1{
+    font-size: 25px;
+    font-weight: 700;
+  }
+  .contactsymbols{
+    height: 5vh;
+  }
+  .icon{
+    width: 25px;
+  height: 25px;
+  }
+  .icon i{
+    font-size: 19px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* Styles for large devices */
+  .navone{
+    height: 6vh;
+  }
+  .navtwo{
+    height: 6vh;
+    padding: 1px;
+  }
+  .navtwo.shrink {
+  
+    height: 6vh;
+   
+
+ }
+  .navbutton{
+    
+      width: 23.6px;
+      height: 15.6px;
+      padding: 0px;
+      margin: 0px;
+    
+  }
+  .nav-item a{
+    font-size: 10px;
+  }
+  .navic{
+    width: 10px;
+    height: 17px;
+    margin: 0px;
+
+    top: 0%;
+  }
+  .main{
+    position: relative;
+    height: 80vh;  
+}
+.main img{
+  
+  height: 90vh;
+}
+.name h1{
+  font-size: 35px;
+}
+.name h3{
+  font-size: 25px;
+}
+.maintwo{
+ 
+  width: 100%;
+  height: 50vh;
+  /* background: radial-gradient(#24002c, #000000); */
+
+}
+.skillcards{
+ 
+  
+  height: 30vh;
+   }
+   .skill h4{
+    font-size: 18px;
+  }
+  .skillcards i{
+    font-size: 22px;
+  }
+  .textbox h1{
+    font-size: 28px;
+   font-weight: 700;
+   
+   margin-bottom: 3%;
+   
+   }
+   .textbox p{
+     font-size: 16px;
+   }
+   .mainthree{
+     height: 70vh;
+   }
+   .aabout{
+     height: 60vh;
+   }
+   .abouttext{
+     padding: 0%;
+   }
+   .mypic{
+     height: 60%;
+   }
+   .me{
+     width: 75%;
+   }
+   .mainfour{
+  
+    height: 60vh;
+   
+    }
+  .myproj h1{
+    font-size: 30px;
+   font-weight: 700;
+  }
+  .myprojects{
+    height: 30vh;
+   
+    margin-top: 5%;
+   
+  }
+  .projcards{
+    height:29vh ;
+    /* width: 25%; */
+  }
+  
+  .projcards:hover{
+    height: 34vh;
+  }
+  .projname h3{
+   font-size: 20px;
+   margin-top: 2px;
+  }
+  .projname p{
+   font-size: 16px;
+   margin: 0px;
+  }
+  .mainfive{
+    height: 29vh;
+  }
+  .contactme h1{
+    font-size: 35px;
+    font-weight: 700;
+  }
+  .contactsymbols{
+    height: 8vh;
+   
+  }
+  .icon{
+    width: 30px;
+  height: 30px;
+  }
+  .icon i{
+    font-size: 25px;
+  }
+}
+@media (min-width: 1200px)and (max-width: 1536.98px) {
+  /* Styles for extra large devices */
+  .skillcards{
+ 
+   
+     height: 40vh;
+     }
+     .maintwo{
+ 
+      width: 100%;
+      height: 60vh;
+      /* background: radial-gradient(#24002c, #000000); */
+    
+    }
+    .projcards{
+      height:35vh ;
+      /* width: 25%; */
+    }
+    
+    .projcards:hover{
+      height: 39vh;
+    }
+   
+}
+
+
+@media (min-width: 1537px) {
+  .skillcards{
+ 
+
+ display: flex;
+ justify-content: center;
+  width: 90%;
+ 
+  height: 50vh;
+ }
+ .mypic{
+
+ 
+ 
+  width: 65%;
+  height:61.3vh ;
+  top: 9%;
+  left: 5%;
+  border-image-slice: 1;
+  
+ }
+ .projcards{
+  height:35vh ;
+  /* width: 25%; */
+}
+
+.projcards:hover{
+  height: 39vh;
+}
+ 
+}
